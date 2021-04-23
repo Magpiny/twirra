@@ -1,0 +1,28 @@
+.feed{
+    flex: 0.4;
+    border: 1px solid var(--twitter-bgcolor);
+    max-width: fit-content;
+    overflow-y: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.feed::-webkit-scrollbar{
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and FireFox  */
+.feed{
+    -ms-overflow-style: none; /* IE and Edge*/
+    scrollbar-width: none;    /* Firefox */ 
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    background-color: floralwhite;
+    z-index: 100;
+    border: 1px solid var(--twitter-bgcolor);
+}
+
+.header>h2{
+    color: red;
+    padding-left: 1.2rem;
+}
