@@ -29,7 +29,7 @@ const Post = ({ image, displayName, username, verified, timestamp, text }) => {
 
             <div className="postBody">
 
-                <div clasName="postHeader">
+                <div className="postHeader">
                     <div className="postHeaderText">
                         
                         <h3>

@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/widget.css';
 
-import { TwitterTimelineEmbed, TwitterShareButton, TwitterTweetEmbed, TwitterHashtagButton } from 'react-twitter-embed';
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterTweetEmbed } from 'react-twitter-embed';
 import { SearchOutlined } from '@material-ui/icons';
 
 function Widget() {
     return (
         <div className="widget">
-            <div class="widget__input">
+            <div className="widget__input">
                 <SearchOutlined className="widget__searchIcon" />
                 <input type="text" placeholder="Search twitter" />
             </div>

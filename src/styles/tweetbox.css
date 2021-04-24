@@ -21,14 +21,19 @@
     border: none;
 }
 
-.tweetBox > Button{
+.tweetboxInput > input:focus{
+    border: none;
+    border: hidden;
+}
+
+footer > Button{
     background-color: var(--twitter-color) !important;
     border: none !important;
     color: white !important;
     font-weight: 900 !important;
     text-transform: inherit !important;
     border-radius: 1.9rem !important;
-    height: 2.5rem !important;
+    height: 2.4rem !important;
     width: 5rem !important;
     margin-top: 1.2rem !important;
     margin-left: auto !important;
@@ -38,4 +43,18 @@
 .inputImage{
     border: none;
     padding: 0.63rem;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    
+    /* align-items: flex-end; */
+    margin-top: .63rem;
+    padding-left: 1.25rem;
+    margin-left: 4rem;
+    color: var(--twitter-color) !important;
+    font-size: 4rem !important;
+    cursor: pointer;
+    width: 80%;
 }

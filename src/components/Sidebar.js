@@ -21,8 +21,8 @@ function Sidebar() {
         <div className="sidebar">
 
 
-             {/* <TwitterIcon className="twirraIcon"  /> works */}
-             {/* <TwirraIcon className="twirraIcon"  /> does not work */}
+             {/* <TwitterIcon className="twirraIcon"  /> works but i dont want to use the exact twitter icon */}
+             {/* <TwirraIcon className="twirraIcon"  /> Expaerimental: does not work;;image cannot be a component here */}
          <img src={ TwirraIcon } alt="twirra-icon" className="twirraIcon" />
              
             

@@ -4,6 +4,7 @@ import Post from './Post';
 import TweetBox from './TweetBox';
 
 
+
 function Feed() {
     return (
         <div className="feed">
@@ -11,6 +12,7 @@ function Feed() {
             { /* Header */  }
             <div className="header">
                 <h2>Home</h2>
+                <span> &#10024; </span>
 
             </div>
 
