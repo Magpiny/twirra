@@ -23,10 +23,13 @@
 }
 
 .header>h2{
-    color: red;
-    padding-left: 1.2rem;
+    margin-left: 3rem;
 }
 
-span{
-    margin-right: 10px;
+h2>span{
+    color: blue;
+    margin-right: 0.63rem;
+    float: right;
+    text-shadow: 0 0 0 rgb(13, 25, 201);
+    
 }

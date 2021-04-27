@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import '../styles/post.css';
 import { Avatar } from '@material-ui/core';
-import { ChatBubbleOutline, FavoriteBorder, PublishOutlined, RepeatOneOutlined, ShareOutlined, VerifiedUserRounded } from '@material-ui/icons';
-import profile from '../Images/magpiny.jpg';
-import profile1 from '../Images/Logopit.png';
+import TimeAgo from 'javascript-time-ago';
+import ReactTimeAgo from 'react-time-ago';
+import { ChatBubbleOutline, FavoriteBorder, PublishOutlined, RepeatOneOutlined, ShareOutlined, Twitter, VerifiedUserRounded } from '@material-ui/icons';
 
-const Post = ({ image, displayName, username, verified, timestamp, text }) => {
-    text ="I really enjoyed working on this app, Goodmorning folks I really enjoyed working on this app, Goodmorning folks"
+import en from 'javascript-time-ago/locale/en';
+import be from 'javascript-time-ago/locale/en-BE';
+TimeAgo.addDefaultLocale(en);
+TimeAgo.addLocale(be)
+
+
+const Post = forwardRef(({ avatar, image, displayName, username, verified,timestamp, text }, ref) => {
+    
     return (
-        <div className="post">
+        <div className="post" ref={ ref }>
             {/*
             A twitter post has the following features:
             Display picture,
@@ -27,20 +33,23 @@ const Post = ({ image, displayName, username, verified, timestamp, text }) => {
 
             */}
 
+            <div className="postAvatar">
+                <Avatar src={ avatar } alt="" />
+            </div>
+
             <div className="postBody">
 
                 <div className="postHeader">
                     <div className="postHeaderText">
                         
                         <h3>
-                            <Avatar src={ profile } alt="" className="postAvatar" />
                             { displayName }
                              { "  " }
                             <span className="verifiedUser">
-                                <VerifiedUserRounded className="postBadge" />
-                                { username }
+                                { verified && <VerifiedUserRounded className="postBadge" /> }
+                                @{ username }
                             </span>
-                            { timestamp }
+                            <ReactTimeAgo date={ timestamp } locale="en-BE" timeStyle="twitter" />
                         </h3>
                     </div>
 
@@ -50,7 +59,8 @@ const Post = ({ image, displayName, username, verified, timestamp, text }) => {
                     </div>
                     
                 </div>
-                <img src={ profile1 } alt="profile does not exist" />
+
+                <img src={ image } alt="profile does not exist" />
 
                 <div className="postFooter">
                     <ChatBubbleOutline fontSize="small" />
@@ -69,6 +79,6 @@ const Post = ({ image, displayName, username, verified, timestamp, text }) => {
             
         </div>
     )
-}
+});
 
 export default Post;

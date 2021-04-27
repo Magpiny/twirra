@@ -5,7 +5,7 @@
     padding-bottom: 0.63rem;
 }
 
-.postHeaderText > H3{
+.postHeaderText > h3{
     display: flex;
     flex-direction: row;
     font-size: 0.9rem;
@@ -24,6 +24,7 @@
 .postBody > img{
     height: 6.5rem;
     border-radius: 1.2rem;
+    width: fit-content;
 }
 
 

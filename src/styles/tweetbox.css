@@ -24,9 +24,10 @@
 .tweetboxInput > input:focus{
     border: none;
     border: hidden;
+    column-count: auto;
 }
 
-footer > Button{
+form > Button{
     background-color: var(--twitter-color) !important;
     border: none !important;
     color: white !important;
