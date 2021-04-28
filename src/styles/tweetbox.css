@@ -2,6 +2,7 @@
     padding-bottom: 0.7rem;
     border-bottom: 0.5rem solid var(--twitter-bgcolor);
     padding-right: 00.7rem;
+    margin-bottom: 1.25rem;
 }
 
 .tweetBox > form{
@@ -37,16 +38,18 @@ form > Button{
     height: 2.4rem !important;
     width: 5rem !important;
     margin-top: 1.2rem !important;
-    margin-left: auto !important;
+    margin-right: 10px !important;
+   align-self: flex-end;
     
 }
 
 .inputImage{
     border: none;
     padding: 0.63rem;
+    margin-left: auto;
 }
 
-footer{
+.footer{
     display: flex;
     justify-content: space-evenly;
     

@@ -3,6 +3,7 @@
     border: 1px solid var(--twitter-bgcolor);
     max-width: fit-content;
     overflow-y: scroll;
+    
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .feed::-webkit-scrollbar{
@@ -24,6 +25,7 @@
 
 .header>h2{
     margin-left: 3rem;
+    color: var(--twitter-color);
 }
 
 h2>span{

@@ -19,6 +19,8 @@ function TweetBox() {
     const onTweet = (e) => setTweetMssg(e.target.value);
     const onTweetImg = (e) => setTweetImg(e.target.value);
 
+    let time = new Date().getTime();
+
     const sendTweet = (e) => {
         e.preventDefault();
         db.collection('posts').add({
@@ -27,7 +29,8 @@ function TweetBox() {
             verified    : true,
             username    : "samuelwanjare",
             text        : tweetMssg,
-            image       : tweetImg 
+            image       : tweetImg ,
+            timestamp : time 
         });
 
         setTweetMssg("");
@@ -48,19 +51,23 @@ function TweetBox() {
 
                 <input onChange={ onTweetImg } value={ tweetImg } className="inputImage" placeholder="Optional::Post an image..." type="text" />
 
-                <Button onClick={ sendTweet } type="submit">Tweet</Button>
 
-            </form>
-
-            <footer>
+                <div class="footer">
                 <PermMediaOutlinedIcon fontSize="small" />
                 <GifIcon fontSize="small" />
                 <PollIcon fontSize="small" />
                 <EmojiEmotionsOutlinedIcon fontSize="small" />
                 <EventOutlinedIcon fontSize="small" />
 
+                
+               </div>
+             &nbsp; <Button onClick={ sendTweet } type="submit">Tweet</Button>
 
-            </footer>
+                
+
+            </form>
+
+            
             
         </div>
     )

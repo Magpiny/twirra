@@ -49,6 +49,7 @@ const Post = forwardRef(({ avatar, image, displayName, username, verified,timest
                                 { verified && <VerifiedUserRounded className="postBadge" /> }
                                 @{ username }
                             </span>
+                            { "  " }
                             <ReactTimeAgo date={ timestamp } locale="en-BE" timeStyle="twitter" />
                         </h3>
                     </div>
